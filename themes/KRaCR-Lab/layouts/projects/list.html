@@ -139,126 +139,81 @@
       background: linear-gradient(to right, #b87532, #d95e2d, #e63934);
     }
 
-    /* Jump to Year card */
-    .jump-to-year-card {
+    /* Jump to Category card */
+    .jump-to-category-card {
       transition: all 0.3s ease;
       background: white;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       border-left: 4px solid #F28C4E;
     }
-    .dark .jump-to-year-card {
+    .dark .jump-to-category-card {
       background: #1E2838;
       backdrop-filter: blur(10px);
       border-left: 4px solid #d95e2d;
     }
-    .jump-to-year-card:hover {
+    .jump-to-category-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     }
-    .dark .jump-to-year-card:hover {
+    .dark .jump-to-category-card:hover {
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     }
 
-    /* Year button and select styles */
-    .year-btn, .year-select {
+    /* Category button styles */
+    .category-btn {
       transition: all 0.3s ease;
       padding: 8px 16px;
       font-size: 0.95rem;
       border-radius: 8px;
       cursor: pointer;
-    }
-    .year-btn {
       background: #e5e7eb;
       color: #374151;
     }
-    .dark .year-btn {
+    .dark .category-btn {
       background: #374151;
       color: #d1d5db;
     }
-    .year-btn:hover {
+    .category-btn:hover {
       background: linear-gradient(to right, #F28C4E, #FF5C57);
       color: #ffffff;
       transform: scale(1.05);
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
-    .dark .year-btn:hover {
+    .dark .category-btn:hover {
       background: linear-gradient(to right, #d95e2d, #e63934);
       color: #ffffff;
     }
-    .year-btn.bg-amber-600 {
+    .category-btn.active {
       background: linear-gradient(to right, #D19A52, #FF5C57) !important;
       color: #ffffff !important;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       border: 1px solid #F28C4E;
     }
-    .dark .year-btn.bg-amber-600 {
+    .dark .category-btn.active {
       background: linear-gradient(to right, #b87532, #e63934) !important;
       color: #ffffff !important;
       border: 1px solid #d95e2d;
     }
-    .year-btn[data-year="ALL"] {
+    .category-btn[data-category="ALL"] {
       font-weight: 600;
       padding: 10px 20px;
       font-size: 1rem;
     }
-    .year-btn[data-year="ALL"]:hover {
+    .category-btn[data-category="ALL"]:hover {
       background: linear-gradient(to right, #F28C4E, #FF5C57, #D19A52);
       transform: scale(1.1);
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
     }
-    .dark .year-btn[data-year="ALL"]:hover {
+    .dark .category-btn[data-category="ALL"]:hover {
       background: linear-gradient(to right, #d95e2d, #e63934, #b87532);
-    }
-
-    .year-select {
-      appearance: none;
-      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23F28C4E%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
-      background-repeat: no-repeat;
-      background-position: right 0.7rem top 50%;
-      background-size: 0.65rem auto;
-      padding-right: 2rem;
-      background-color: #e5e7eb;
-      color: #374151;
-    }
-    .dark .year-select {
-      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23d95e2d%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
-      background-color: #374151;
-      color: #d1d5db;
-    }
-    .year-select:hover {
-      background-color: #F28C4E;
-      color: #ffffff;
-      transform: scale(1.05);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-    .dark .year-select:hover {
-      background-color: #d95e2d;
-      color: #ffffff;
-    }
-    .year-select.bg-amber-600, .year-select:focus {
-      background: linear-gradient(to right, #D19A52, #FF5C57) !important;
-      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
-      background-repeat: no-repeat;
-      background-position: right 0.7rem top 50%;
-      background-size: 0.65rem auto;
-      color: #ffffff !important;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      border: 1px solid #F28C4E;
-    }
-    .dark .year-select.bg-amber-600, .dark .year-select:focus {
-      background: linear-gradient(to right, #b87532, #e63934) !important;
-      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
-      border: 1px solid #d95e2d;
-    }
-    .year-select option[value="ALL"] {
-      font-weight: 600;
     }
 
     /* Timeline styles */
     .timeline {
       position: relative;
       padding-left: 2rem;
+      margin-bottom: 2rem; /* Added to ensure spacing between timelines */
     }
     .timeline:before {
       content: '';
@@ -293,6 +248,19 @@
       box-shadow: 0 0 8px rgba(217, 94, 45, 0.5);
     }
 
+    /* Year section and header styles */
+    .year-section {
+      padding-bottom: 1.5rem; /* Added padding to ensure clearance below cards */
+    }
+    .year-header {
+      margin-bottom: 2.5rem; /* Increased from mb-6 (1.5rem) to prevent collision */
+    }
+    @media (min-width: 640px) {
+      .year-header {
+        margin-bottom: 3rem; /* Increased from sm:mb-8 (2rem) for larger screens */
+      }
+    }
+
     /* Responsive styles */
     @media (max-width: 639px) {
       .content-container {
@@ -307,25 +275,35 @@
       }
       .timeline {
         padding-left: 1.5rem;
+        margin-bottom: 1.5rem; /* Adjusted for smaller screens */
       }
       .timeline:before {
         left: 0.35rem;
       }
-      .year-btn, .year-select {
-        font-size: 0.85rem;
-        padding: 6px 12px;
-      }
-      .year-btn[data-year="ALL"] {
-        padding: 8px 14px;
-        font-size: 0.9rem;
-      }
-      .jump-to-year-card {
-        padding: 12px;
-      }
+      .category-btn {
+        font-size: 0.85स्याही।, .category-btn[data-category="ALL"] {
+        font-weight: 600;
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    .category-btn[data-category="ALL"]:hover {
+        background: linear-gradient(to right, #F28C4E, #FF5C57, #D19A52);
+        transform: scale(1.1);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    }
+    .dark .category-btn[data-category="ALL"]:hover {
+        background: linear-gradient(to right, #d95e2d, #e63934, #b87532);
+    }
       .year-dot {
         width: 12px;
         height: 12px;
         left: 0.1rem;
+      }
+      .year-section {
+        padding-bottom: 1rem; /* Adjusted for smaller screens */
+      }
+      .year-header {
+        margin-bottom: 2rem; /* Adjusted for smaller screens */
       }
     }
     @media (min-width: 640px) and (max-width: 1023px) {
@@ -351,7 +329,7 @@
     {{ $projects := sort $.Site.Data.projects "Year" "desc" }}
     {{ $byYear := dict }}
     {{ range $projects }}
-      {{ $yr := printf "%v" .Year }} <!-- Convert Year to string -->
+      {{ $yr := printf "%v" .Year }}
       {{ $slice := index $byYear $yr | default (slice) }}
       {{ $slice = $slice | append . }}
       {{ $byYear = merge $byYear (dict $yr $slice) }}
@@ -363,53 +341,95 @@
       {{ $years = $years | append $y }}
     {{ end }}
     {{ $years = sort $years "value" "desc" }}
+    {{ $latestYear := index $years 0 }}
+    {{ $pastYears := slice }}
+    {{ range $i, $y := $years }}
+      {{ if ne $i 0 }}
+        {{ $pastYears = $pastYears | append $y }}
+      {{ end }}
+    {{ end }}
 
-    <!-- Jump to Year card -->
-    <div class="jump-to-year-card mb-8 sm:mb-12 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-lg shadow-md">
+    <!-- Jump to Category card -->
+    <div class="jump-to-category-card mb-8 sm:mb-12 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-lg shadow-md">
       <div class="p-4 sm:p-6">
-        <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white mb-4">Jump to Year</h3>
+        <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white mb-4">Jump to Category</h3>
         <div class="flex flex-wrap gap-2 overflow-x-auto">
-          {{ if gt (len $years) 10 }}
-            <select id="year-select" class="year-select px-3 py-1.5 sm:px-4 sm:py-2 text-sm font-medium rounded-md transition-all duration-300 w-full md:w-auto" aria-label="Select a year to view projects">
-              <option value="ALL" selected>ALL</option>
-              {{ range $years }}
-                <option value="{{ . }}">{{ . }}</option>
-              {{ end }}
-            </select>
-          {{ else }}
-            <button
-              class="year-btn px-3 py-1 sm:px-4 sm:py-1.5 text-sm font-medium rounded-md transition-all duration-300 bg-amber-600 text-white dark:bg-amber-600 dark:text-white"
-              data-year="ALL"
-              aria-label="View all projects"
-            >
-              ALL
-            </button>
-            {{ range $i, $year := $years }}
-              <button
-                class="year-btn px-3 py-1 sm:px-4 sm:py-1.5 text-sm font-medium rounded-md transition-all duration-300 {{ if eq $i 0 }}bg-amber-600 text-white dark:bg-amber-600 dark:text-white{{ else }}bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300{{ end }}"
-                data-year="{{ $year }}"
-                aria-label="View projects for {{ $year }}"
-              >
-                {{ $year }}
-              </button>
-            {{ end }}
+          <button
+            class="category-btn px-3 py-1 sm:px-4 sm:py-1.5 text-sm font-medium rounded-md transition-all duration-300 active bg-amber-600 text-white dark:bg-amber-600 dark:text-white"
+            data-category="ALL"
+            aria-label="View all projects"
+          >
+            ALL
+          </button>
+          <button
+            class="category-btn px-3 py-1 sm:px-4 sm:py-1.5 text-sm font-medium rounded-md transition-all duration-300 bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
+            data-category="CURRENT"
+            aria-label="View current projects"
+          >
+            Current ({{ $latestYear }})
+          </button>
+          <button
+            class="category-btn px-3 py-1 sm:px-4 sm:py-1.5 text-sm font-medium rounded-md transition-all duration-300 bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
+            data-category="PAST"
+            aria-label="View past projects"
+          >
+            Past
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Current Projects (Latest Year) -->
+    <div class="timeline relative mb-12 current-projects">
+      <div class="year-section" data-year="{{ $latestYear }}">
+        <div class="year-header flex items-center cursor-pointer" data-toggle="year-{{ $latestYear }}">
+          <div class="year-dot"></div>
+          <div class="timeline-dot w-4 h-4 rounded-full bg-amber-600 dark:bg-amber-400 mr-4"></div>
+          <h2 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Current Projects ({{ $latestYear }})</h2>
+        </div>
+        <div class="project-items grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-year-content="{{ $latestYear }}">
+          {{ range $project := index $byYear $latestYear }}
+            <div class="project-card">
+              <div class="content-container">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2 line-clamp-2">{{ $project.Title }}</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mb-3 line-clamp-1">By: {{ $project.Authors }}</p>
+                <span class="category-badge {{ with index (site.GetPage "/projects").Params.categories $project.Category }}{{ .color }}{{ else }}bg-gradient-to-r from-[#D19A52] to-[#FF5C57] dark:from-[#b87532] dark:to-[#e63934]{{ end }}">
+                  {{ $project.Category }}
+                </span>
+                <div class="description-container scrollbar pr-3" tabindex="0">
+                  {{ $project.Description }}
+                </div>
+                <div class="mt-auto h-6">
+                  {{ if $project.githubUrl }}
+                    <a href="{{ $project.githubUrl }}" target="_blank" rel="noopener noreferrer" class="github-button">
+                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.153-1.11-1.461-1.11-1.461-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.087.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.203 2.397.1 2.65.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.686-4.566 4.936.359.308.678.916.678 1.846 0 1.335-.012 2.415-.012 2.741 0 .267.18 .579.688.481C19.138 20.161 22 16.418 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" />
+                      </svg>
+                      View on GitHub
+                    </a>
+                  {{ else }}
+                    <div class="h-6"></div>
+                  {{ end }}
+                </div>
+              </div>
+              <div class="gradient-border"></div>
+            </div>
           {{ end }}
         </div>
       </div>
     </div>
 
-    <!-- Timeline -->
-    <div class="timeline relative">
-      {{ range $i, $year := $years }}
-        {{ $projects := index $byYear $year }}
+    <!-- Past Projects (Other Years) -->
+    <div class="timeline relative past-projects">
+      {{ range $i, $year := $pastYears }}
         <div class="year-section {{ if ne $i 0 }}hidden{{ end }}" data-year="{{ $year }}">
-          <div class="year-header flex items-center mb-6 sm:mb-8 cursor-pointer" data-toggle="year-{{ $year }}">
+          <div class="year-header flex items-center cursor-pointer" data-toggle="year-{{ $year }}">
             <div class="year-dot"></div>
             <div class="timeline-dot w-4 h-4 rounded-full bg-amber-600 dark:bg-amber-400 mr-4"></div>
-            <h2 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">{{ $year }}</h2>
+            <h2 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Past Projects ({{ $year }})</h2>
           </div>
           <div class="project-items grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 {{ if ne $i 0 }}hidden{{ end }}" data-year-content="{{ $year }}">
-            {{ range $index, $project := $projects }}
+            {{ range $project := index $byYear $year }}
               <div class="project-card">
                 <div class="content-container">
                   <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2 line-clamp-2">{{ $project.Title }}</h3>
@@ -440,44 +460,41 @@
         </div>
       {{ end }}
     </div>
-  </div>
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      const yearButtons = document.querySelectorAll('.year-btn');
-      const yearSelect = document.querySelector('.year-select');
-      const yearSections = document.querySelectorAll('.year-section');
+      const categoryButtons = document.querySelectorAll('.category-btn');
+      const currentProjects = document.querySelector('.current-projects');
+      const pastProjects = document.querySelector('.past-projects');
       const yearHeaders = document.querySelectorAll('.year-header');
+      const yearSections = document.querySelectorAll('.year-section');
 
-      // Show a specific year or all years
-      const showYear = (year) => {
-        console.log(`Showing year: ${year}`);
-        yearButtons.forEach(btn => {
-          btn.classList.remove('bg-amber-600', 'text-white', 'dark:bg-amber-600', 'dark:text-white');
+      // Show a specific category or all
+      const showCategory = (category) => {
+        console.log(`Showing category: ${category}`);
+        categoryButtons.forEach(btn => {
+          btn.classList.remove('active', 'bg-amber-600', 'text-white', 'dark:bg-amber-600', 'dark:text-white');
           btn.classList.add('bg-gray-200', 'dark:bg-gray-800', 'text-gray-700', 'dark:text-gray-300');
-          if (btn.dataset.year === year) {
-            btn.classList.add('bg-amber-600', 'text-white', 'dark:bg-amber-600', 'dark:text-white');
+          if (btn.dataset.category === category) {
+            btn.classList.add('active', 'bg-amber-600', 'text-white', 'dark:bg-amber-600', 'dark:text-white');
           }
         });
 
-        if (yearSelect) {
-          yearSelect.value = year;
-          yearSelect.classList.remove('bg-amber-600', 'text-white', 'dark:bg-amber-600', 'dark:text-white');
-          yearSelect.classList.add('bg-gray-200', 'dark:bg-gray-800', 'text-gray-700', 'dark:text-gray-300');
-          if (yearSelect.value === year) {
-            yearSelect.classList.add('bg-amber-600', 'text-white', 'dark:bg-amber-600', 'dark:text-white');
-          }
-        }
-
-        yearSections.forEach(section => {
-          if (year === 'ALL') {
+        if (category === 'ALL') {
+          currentProjects.classList.remove('hidden');
+          pastProjects.classList.remove('hidden');
+          yearSections.forEach(section => {
             section.classList.remove('hidden');
             const content = section.querySelector('.project-items');
             if (content) content.classList.remove('hidden');
             const header = section.querySelector('.year-header h2');
             if (header) header.classList.add('text-amber-600', 'dark:text-amber-400');
-          } else {
-            if (section.dataset.year === year) {
+          });
+        } else if (category === 'CURRENT') {
+          currentProjects.classList.remove('hidden');
+          pastProjects.classList.add('hidden');
+          yearSections.forEach(section => {
+            if (section.dataset.year === '{{ $latestYear }}') {
               section.classList.remove('hidden');
               const content = section.querySelector('.project-items');
               if (content) content.classList.remove('hidden');
@@ -485,42 +502,45 @@
               if (header) header.classList.add('text-amber-600', 'dark:text-amber-400');
             } else {
               section.classList.add('hidden');
-              const header = section.querySelector('.year-header h2');
-              if (header) header.classList.remove('text-amber-600', 'dark:text-amber-400');
             }
-          }
-        });
+          });
+        } else if (category === 'PAST') {
+          currentProjects.classList.add('hidden');
+          pastProjects.classList.remove('hidden');
+          yearSections.forEach(section => {
+            if (section.dataset.year !== '{{ $latestYear }}') {
+              section.classList.remove('hidden');
+              const content = section.querySelector('.project-items');
+              if (content) content.classList.remove('hidden');
+              const header = section.querySelector('.year-header h2');
+              if (header) header.classList.add('text-amber-600', 'dark:text-amber-400');
+            } else {
+              section.classList.add('hidden');
+            }
+          });
+        }
       };
 
       // Initialize with ALL
       console.log(`Initializing with ALL`);
-      showYear('ALL');
+      showCategory('ALL');
 
-      // Year button click handler
-      yearButtons.forEach(button => {
+      // Category button click handler
+      categoryButtons.forEach(button => {
         button.addEventListener('click', () => {
-          const year = button.dataset.year;
-          console.log(`Button clicked for year: ${year}`);
-          showYear(year);
+          const category = button.dataset.category;
+          console.log(`Button clicked for category: ${category}`);
+          showCategory(category);
         });
 
         button.addEventListener('keydown', e => {
           if (e.key === 'Enter' || e.key === 'Space') {
             e.preventDefault();
-            console.log(`Keyboard trigger for year: ${button.dataset.year}`);
+            console.log(`Keyboard trigger for category: ${button.dataset.category}`);
             button.click();
           }
         });
       });
-
-      // Year select change handler
-      if (yearSelect) {
-        yearSelect.addEventListener('change', () => {
-          const year = yearSelect.value;
-          console.log(`Dropdown changed to year: ${year}`);
-          showYear(year);
-        });
-      }
 
       // Year header toggle
       yearHeaders.forEach(header => {
