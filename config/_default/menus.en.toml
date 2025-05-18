@@ -12,25 +12,24 @@ url = "/team"
 weight = 2
 
 [[main]]
-name = "News"
-url = "/news"
-weight = 3
-
-[[main]]
 name = "Publications"
 url = "/publications"
-weight = 4
-
-[[main]]
-name = "Resources"
-url = "/resources"
-weight = 5
+weight = 3
 
 [[main]]
 name = "Projects"
 url = "/projects"
-weight = 6
+weight = 4
 
+[[main]]
+name = "News"
+url = "/news"
+weight = 5
+
+[[main]]
+name = "Resources"
+url = "/resources"
+weight = 6
 # [[main]]
 # name = "Blogs"
 # url = "/blog"
