@@ -232,9 +232,9 @@
       height: 16px;
       border-radius: 50%;
       background: #F28C4E;
-      position: absolute;
-      left: 0.15rem;
-      transform: translateY(4px); /* Adjusted for better alignment */
+      position: relative; /* Inline with year text */
+      margin-right: 1rem; /* Space between dot and text */
+      transform: translateY(4px); /* Align vertically with text */
       transition: all 0.3s ease;
     }
     .dark .year-dot {
@@ -294,8 +294,8 @@
       .year-dot {
         width: 12px;
         height: 12px;
-        left: 0.1rem;
-        transform: translateY(4px); /* Adjusted for smaller screens */
+        margin-right: 0.75rem; /* Smaller spacing */
+        transform: translateY(4px);
       }
       .year-header:hover .year-dot {
         transform: scale(1.3) translateY(4px);
@@ -318,9 +318,6 @@
       }
       .timeline:before {
         left: 0.95rem;
-      }
-      .year-dot {
-        left: 0.65rem;
       }
     }
   </style>

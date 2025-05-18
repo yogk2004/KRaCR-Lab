@@ -742,7 +742,7 @@
       <div class="row">
         <div class="md:col-12 lg:col-10 xl:col-8 mx-auto mb-12 text-center">
           <h2 class="mb-4 text-4xl font-bold text-gray-900 dark:text-white">
-            <span class="bg-clip-text text-transparent" style="background-image: linear-gradient(to right, #e77f25,#e77f25 , #FF5C57);">Latest News</span>
+            <span class="bg-clip-text text-transparent" style="background-image: linear-gradient(to right, #e77f25, #e77f25, #FF5C57);">Latest News</span>
           </h2>
           <p class="text-lg text-gray-700 dark:text-gray-300 px-4 sm:px-0">
             Discover our latest achievements and events in ontology and knowledge graph research.
@@ -750,9 +750,6 @@
         </div>
       </div>
       <div class="row justify-center relative gap-y-8 md:gap-y-16">
-        <!-- Timeline Line -->
-        <div class="absolute top-0 bottom-0 left-1/2 w-1 bg-gradient-to-b from-[#D19A52] via-[#F28C4E] to-[#FF5C57] dark:from-[#b87532] dark:via-[#d95e2d] dark:to-[#e63934] transform -translate-x-1/2 z-0"></div>
-
         {{ $rawNews := site.Data.news }}
         {{ if not $rawNews }}
           <div class="col-12 text-center">
@@ -876,7 +873,7 @@
         }
       }
 
-      /* Add gap between cards and timeline line */
+      /* Add gap between cards */
       .news-card-left .flex {
         margin-right: 1rem; /* Gap for left-aligned cards */
       }
@@ -928,10 +925,6 @@
 
         .timeline-section .container {
           padding-top: 3rem;
-        }
-
-        .absolute.top-0.bottom-0.left-1\/2 {
-          display: none;
         }
       }
     </style>
@@ -1091,7 +1084,7 @@
         justify-content: space-between;
         height: 100%;
       }
-      
+
       .projectSwiper .swiper-slide .flex-col {
         height: 100%;
         justify-content: space-between;
