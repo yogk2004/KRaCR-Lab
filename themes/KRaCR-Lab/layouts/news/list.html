@@ -53,15 +53,15 @@
               {{ else }}
                 <!-- Buttons for fewer years -->
                 <button
-                  class="year-btn px-3 py-1 sm:px-4 sm:py-1.5 text-sm font-medium rounded-md transition-all duration-300 bg-[#FF5C57] text-white dark:bg-[#e63934] dark:text-white backdrop-blur-sm"
+                  class="year-btn px-3 py-1 sm:px-4 sm:py-1.5 text-sm font-medium rounded-md transition-all duration-300 bg-amber-600 text-white dark:bg-amber-600 dark:text-white"
                   data-year="ALL"
                   aria-label="View all news"
                 >
                   ALL
                 </button>
-                {{ range $year := $years }}
+                {{ range $i, $year := $years }}
                   <button
-                    class="year-btn px-3 py-1 sm:px-4 sm:py-1.5 text-sm font-medium rounded-md transition-all duration-300 bg-gray-200/80 dark:bg-gray-800/80 text-gray-700 dark:text-gray-300 backdrop-blur-sm"
+                    class="year-btn px-3 py-1 sm:px-4 sm:py-1.5 text-sm font-medium rounded-md transition-all duration-300 {{ if eq $i 0 }}bg-amber-600 text-white dark:bg-amber-600 dark:text-white{{ else }}bg-gray-200/80 dark:bg-gray-800/80 text-gray-700 dark:text-gray-300{{ end }}"
                     data-year="{{ $year }}"
                     aria-label="View news for {{ $year }}"
                   >
@@ -152,19 +152,19 @@
 
         // Reset all buttons and select
         yearButtons.forEach(btn => {
-          btn.classList.remove('bg-[#FF5C57]', 'text-white', 'dark:bg-[#e63934]', 'dark:text-white');
+          btn.classList.remove('bg-amber-600', 'text-white', 'dark:bg-amber-600', 'dark:text-white');
           btn.classList.add('bg-gray-200', 'dark:bg-gray-800', 'text-gray-700', 'dark:text-gray-300');
           if (btn.dataset.year === year) {
-            btn.classList.add('bg-[#FF5C57]', 'text-white', 'dark:bg-[#e63934]', 'dark:text-white');
+            btn.classList.add('bg-amber-600', 'text-white', 'dark:bg-amber-600', 'dark:text-white');
           }
         });
 
         if (yearSelect) {
           yearSelect.value = year;
-          yearSelect.classList.remove('bg-[#FF5C57]', 'text-white', 'dark:bg-[#e63934]', 'dark:text-white');
+          yearSelect.classList.remove('bg-amber-600', 'text-white', 'dark:bg-amber-600', 'dark:text-white');
           yearSelect.classList.add('bg-gray-200', 'dark:bg-gray-800', 'text-gray-700', 'dark:text-gray-300');
           if (yearSelect.value === year) {
-            yearSelect.classList.add('bg-[#FF5C57]', 'text-white', 'dark:bg-[#e63934]', 'dark:text-white');
+            yearSelect.classList.add('bg-amber-600', 'text-white', 'dark:bg-amber-600', 'dark:text-white');
           }
         }
 
@@ -324,14 +324,14 @@
       color: #ffffff;
     }
 
-    .year-btn.bg-[#FF5C57] {
+    .year-btn.bg-amber-600 {
       background: linear-gradient(to right, #D19A52, #FF5C57) !important;
       color: #ffffff !important;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       border: 1px solid #F28C4E;
     }
 
-    .dark .year-btn.bg-[#FF5C57] {
+    .dark .year-btn.bg-amber-600 {
       background: linear-gradient(to right, #b87532, #e63934) !important;
       color: #ffffff !important;
       border: 1px solid #d95e2d;
@@ -384,18 +384,18 @@
       color: #ffffff;
     }
 
-    .year-select.bg-[#FF5C57], .year-select:focus {
+    .year-select.bg-amber-600, .year-select:focus {
       background: linear-gradient(to right, #D19A52, #FF5C57) !important;
       background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
       background-repeat: no-repeat;
       background-position: right 0.7rem top 50%;
-      background-size: 0.65rem auto;
+      background-size: 0.65 metterem auto;
       color: #ffffff !important;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       border: 1px solid #F28C4E;
     }
 
-    .dark .year-select.bg-[#FF5C57], .dark .year-select:focus {
+    .dark .year-select.bg-amber-600, .dark .year-select:focus {
       background: linear-gradient(to right, #b87532, #e63934) !important;
       background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
       border: 1px solid #d95e2d;
