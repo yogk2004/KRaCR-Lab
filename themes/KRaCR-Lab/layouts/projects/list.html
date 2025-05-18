@@ -213,7 +213,7 @@
     .timeline {
       position: relative;
       padding-left: 2rem;
-      margin-bottom: 2rem; /* Added to ensure spacing between timelines */
+      margin-bottom: 2rem;
     }
     .timeline:before {
       content: '';
@@ -234,14 +234,14 @@
       background: #F28C4E;
       position: absolute;
       left: 0.15rem;
-      transform: translateY(-2px);
+      transform: translateY(4px); /* Adjusted for better alignment */
       transition: all 0.3s ease;
     }
     .dark .year-dot {
       background: #d95e2d;
     }
     .year-header:hover .year-dot {
-      transform: scale(1.3) translateY(-2px);
+      transform: scale(1.3) translateY(4px);
       box-shadow: 0 0 8px rgba(241, 140, 78, 0.5);
     }
     .dark .year-header:hover .year-dot {
@@ -250,14 +250,14 @@
 
     /* Year section and header styles */
     .year-section {
-      padding-bottom: 1.5rem; /* Added padding to ensure clearance below cards */
+      padding-bottom: 1.5rem;
     }
     .year-header {
-      margin-bottom: 2.5rem; /* Increased from mb-6 (1.5rem) to prevent collision */
+      margin-bottom: 2.5rem;
     }
     @media (min-width: 640px) {
       .year-header {
-        margin-bottom: 3rem; /* Increased from sm:mb-8 (2rem) for larger screens */
+        margin-bottom: 3rem;
       }
     }
 
@@ -275,35 +275,36 @@
       }
       .timeline {
         padding-left: 1.5rem;
-        margin-bottom: 1.5rem; /* Adjusted for smaller screens */
+        margin-bottom: 1.5rem;
       }
       .timeline:before {
         left: 0.35rem;
       }
       .category-btn {
-        font-size: 0.85स्याही।, .category-btn[data-category="ALL"] {
-        font-weight: 600;
-        padding: 10px 20px;
-        font-size: 1rem;
-    }
-    .category-btn[data-category="ALL"]:hover {
-        background: linear-gradient(to right, #F28C4E, #FF5C57, #D19A52);
-        transform: scale(1.1);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-    }
-    .dark .category-btn[data-category="ALL"]:hover {
-        background: linear-gradient(to right, #d95e2d, #e63934, #b87532);
-    }
+        font-size: 0.85rem;
+        padding: 6px 12px;
+      }
+      .category-btn[data-category="ALL"] {
+        padding: 8px 14px;
+        font-size: 0.9rem;
+      }
+      .jump-to-category-card {
+        padding: 12px;
+      }
       .year-dot {
         width: 12px;
         height: 12px;
         left: 0.1rem;
+        transform: translateY(4px); /* Adjusted for smaller screens */
+      }
+      .year-header:hover .year-dot {
+        transform: scale(1.3) translateY(4px);
       }
       .year-section {
-        padding-bottom: 1rem; /* Adjusted for smaller screens */
+        padding-bottom: 1rem;
       }
       .year-header {
-        margin-bottom: 2rem; /* Adjusted for smaller screens */
+        margin-bottom: 2rem;
       }
     }
     @media (min-width: 640px) and (max-width: 1023px) {
@@ -384,7 +385,6 @@
       <div class="year-section" data-year="{{ $latestYear }}">
         <div class="year-header flex items-center cursor-pointer" data-toggle="year-{{ $latestYear }}">
           <div class="year-dot"></div>
-          <div class="timeline-dot w-4 h-4 rounded-full bg-amber-600 dark:bg-amber-400 mr-4"></div>
           <h2 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Current Projects ({{ $latestYear }})</h2>
         </div>
         <div class="project-items grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-year-content="{{ $latestYear }}">
@@ -425,7 +425,6 @@
         <div class="year-section {{ if ne $i 0 }}hidden{{ end }}" data-year="{{ $year }}">
           <div class="year-header flex items-center cursor-pointer" data-toggle="year-{{ $year }}">
             <div class="year-dot"></div>
-            <div class="timeline-dot w-4 h-4 rounded-full bg-amber-600 dark:bg-amber-400 mr-4"></div>
             <h2 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Past Projects ({{ $year }})</h2>
           </div>
           <div class="project-items grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 {{ if ne $i 0 }}hidden{{ end }}" data-year-content="{{ $year }}">
