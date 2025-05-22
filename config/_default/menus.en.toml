@@ -31,11 +31,6 @@ name = "Resources"
 url = "/resources"
 weight = 6
 
-[[main]]
-name = "Blogs"
-url = "/blog"
-weight = 7
-
 # [[main]]
 # name = "Blogs"
 # url = "/blog"

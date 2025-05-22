@@ -105,7 +105,7 @@
     </ul>
 
     <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
-      {{ with site.Params.search }}
+      <!-- {{ with site.Params.search }}
         {{ if .enable }}
           <button
             aria-label="search"
@@ -123,7 +123,7 @@
             <i class="fa-solid fa-search"></i>
           </button>
         {{ end }}
-      {{ end }}
+      {{ end }} -->
 
       {{ partial "components/language-switcher" (dict "Context" . "Class" "mr-5 pl-2 py-1 dark:bg-darkmode-light rounded") }}
       {{ partial "components/theme-switcher" (dict "Class" "mr-5") }}
