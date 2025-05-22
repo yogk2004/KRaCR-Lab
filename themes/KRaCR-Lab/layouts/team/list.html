@@ -280,7 +280,7 @@
       <div class="container">
         <!-- Quick-Scroll Sidebar Navigation -->
         <nav class="quick-nav" role="navigation" aria-label="Team category quick navigation">
-          {{ $order := slice "Faculty" "PhD" "Masters" "BTech" "Collaborator" "Alumni" }}
+          {{ $order := slice "Faculty" "PhD" "MTech" "BTech" "Collaborator" "Alumni" }}
           {{ range $pos := $order }}
             {{ $group := where site.Data.teams "Position" $pos }}
             {{ if gt (len $group) 0 }}
@@ -295,7 +295,7 @@
         </nav>
 
         <!-- Team Sections -->
-        {{ $order := slice "Faculty" "PhD" "Masters" "BTech" "Collaborator" "Alumni" }}
+        {{ $order := slice "Faculty" "PhD" "MTech" "BTech" "Collaborator" "Alumni" }}
         {{ $teams := site.Data.teams }}
 
         {{ range $pos := $order }}

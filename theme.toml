@@ -1,38 +1,13 @@
-name = "Hugoplate"
+name = "KRaCR Lab"
 license = "MIT"
-licenselink = "https://github.com/zeon-studio/hugoplate/blob/main/LICENSE"
-description = "Hugoplate is a free starter template built with Hugo, and TailwindCSS, providing everything you need to jumpstart your Hugo project and save valuable time."
-homepage = "https://github.com/zeon-studio/hugoplate"
-demosite = "https://zeon.studio/preview?project=hugoplate"
-min_version = "0.141.0"
-
-tags = [
-  "blog",
-  "responsive",
-  "minimal",
-  "personal",
-  "light",
-  "dark",
-  "multilingual",
-  "landing",
-  "contact",
-  "dark mode",
-  "tailwindcss",
-]
-
-features = [
-  "Multi-Authors",
-  "Search",
-  "Multilingual",
-  "Dark Mode",
-  "Taxonomies",
-]
+description = "KRaCR tailwindcss Lab Website"
 
 [author]
-name = "Zeon Studio"
-homepage = "https://zeon.studio"
+name = "Yash Singh"
+homepage = "https://www.linkedin.com/in/yash-singh-iiitd/"
+repo = "https://github.com/YSULTRA"
 
-[original]
-author = "Zeon Studio"
-homepage = "https://zeon.studio"
-repo = "https://github.com/zeon-studio/themeplate"
+[author2]
+author = "Yogesh Kumar"
+homepage = "https://www.linkedin.com/in/yogesh-kumar-906557263/"
+repo = "https://github.com/yogk2004"
