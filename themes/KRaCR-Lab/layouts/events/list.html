@@ -87,14 +87,12 @@
     flex-direction: column;
     height: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    /* Added subtle shadow in light mode */
   }
 
   .dark .blog-card {
     border: 1px solid rgba(55, 65, 81, 0.5);
     background: #1F2937;
     box-shadow: none;
-    /* Remove shadow in dark mode */
   }
 
   .blog-card:hover {
@@ -327,7 +325,8 @@
                 <a href="{{ .RelPermalink }}" class="blog-card-link">
                   <div class="blog-card-image">
                     {{ with .Params.image }}
-                    {{ partial "image" (dict "Src" . "Context" $ "Alt" $.Title "Class" "w-full h-full object-cover") }}
+                    {{ partial "image" (dict "Src" . "Context" $ "Alt" "" "Class" "w-full h-full object-cover") }}
+
                     {{ else }}
                     <div class="image-placeholder">
                       <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
@@ -372,7 +371,7 @@
         </div>
         {{ end }}
 
-        <!-- Pagination (optional, may need adjustment) -->
+        <!-- Pagination -->
         {{ partial "components/pagination.html" . }}
       </div>
 
