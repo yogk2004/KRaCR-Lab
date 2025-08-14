@@ -4,7 +4,7 @@ meta_title: "TAPAI Workshop at ISWC 2025"
 description: "this is meta description"
 date: 2025-08-14T09:00:00Z
 image: "/images/image-placeholder.png"
-categories: ["Workshop"]
+categories: ["Summer School"]
 author: "John Domingue, Aidan Hogan, Luis-Daniel Ibáñez, Oshani Seneviratne, Maria-Esther Vidal"
 tags: ["nextjs", "tailwind"]
 
